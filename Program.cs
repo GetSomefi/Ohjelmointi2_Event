@@ -59,8 +59,10 @@ class Program
         //if(Console.ReadLine() == "init"){
             Console.WriteLine("Triggering the event from Program class");
             es.EventMethod(); // kutsutaan trigger eventiä 
+
             Console.WriteLine("--Again--");
-            es.EventBroadcaster -= lambdaMethod; //peru eventin tilaus (unsubscribe)
+
+            es.EventBroadcaster -= lambdaMethod; //peru eventin tilaus (unsubscribe) (*)
             es.EventMethod(); // kutsutaan trigger eventiä 
         //}
     }
